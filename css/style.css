@@ -1,0 +1,224 @@
+/*===========Common Css================== */
+ 
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+/* ---------------Common Css End------------ */
+
+/* ============= Body Part Css Start ============= */
+
+body{
+
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url(../image/black.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* ============= Body Part Css End ============= */
+
+/* ============= Todohead Part Start ========== */
+
+.todohead{
+
+    display: flex;
+    gap: 10px;
+}
+
+
+.headinput {
+    border: 2px solid transparent;
+    width: 20em;
+    height: 2.5em;
+    padding-left: 0.8em;
+    outline: none;
+    overflow: hidden;
+    background-color: #000000;
+    border-radius: 10px;
+    transition: all 0.5s;
+    color: #fff;
+  }
+  
+  .headinput:hover,
+  .headinput:focus {
+    border: 2px solid #e4f0fc;
+    box-shadow: 0px 0px 0px 7px rgba(140, 195, 247, 0.2);
+    background-color: rgb(0, 0, 0);
+  }
+
+
+  .headbutton {
+    position: relative;
+    padding: 0px 4px;
+    border-radius: 3px;
+    border:2px dotted #000000;
+    color: #0715dd;
+    cursor: pointer;
+    background-color: #ffffff;
+    transition: all linear .2s;
+    font-size: 10px;
+    font-weight:600;
+    height: 26px;
+    top:2.8px;
+  }
+  
+  .button:active {
+    transform: scale(1.1);
+  }
+
+  .headbutton:hover{
+
+    font-size: 11px;
+  }
+  
+  .headbutton:before,
+  .headbutton:after {
+    position: absolute;
+    content: "";
+    width: 150%;
+    left: 50%;
+    height: 100%;
+    transform: translateX(-50%);
+    z-index: -1000;
+    background-repeat: no-repeat;
+  }
+  
+  .headbutton:hover:before {
+    top: -70%;
+    background-image: radial-gradient(circle, #000000 20%, transparent 20%),
+      radial-gradient(circle, transparent 20%, #000000 20%, transparent 30%),
+      radial-gradient(circle, #000000 20%, transparent 20%),
+      radial-gradient(circle, #000000 20%, transparent 20%),
+      radial-gradient(circle, transparent 10%, #000000 15%, transparent 20%),
+      radial-gradient(circle, #000000 20%, transparent 20%),
+      radial-gradient(circle, #000000 20%, transparent 20%),
+      radial-gradient(circle, #000000 20%, transparent 20%),
+      radial-gradient(circle, #000000 20%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+      10% 10%, 18% 18%;
+    background-position: 50% 120%;
+    animation: greentopBubbles 2s ease;
+  }
+  
+  @keyframes greentopBubbles {
+    0% {
+      background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+        40% 90%, 55% 90%, 70% 90%;
+    }
+  
+    50% {
+      background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+        50% 50%, 65% 20%, 90% 30%;
+    }
+  
+    100% {
+      background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+        50% 40%, 65% 10%, 90% 20%;
+      background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+  }
+  
+  .headbutton:hover::after {
+    bottom: -70%;
+    background-image: radial-gradient(circle, #000000 20%, transparent 20%),
+      radial-gradient(circle, #000000 20%, transparent 20%),
+      radial-gradient(circle, transparent 10%, #000000 15%, transparent 20%),
+      radial-gradient(circle, #000000 20%, transparent 20%),
+      radial-gradient(circle, #000000 20%, transparent 20%),
+      radial-gradient(circle, #000000 20%, transparent 20%),
+      radial-gradient(circle, #000000 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+    background-position: 50% 0%;
+    animation: greenbottomBubbles 2s ease;
+  }
+  
+  @keyframes greenbottomBubbles {
+    0% {
+      background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+        70% -10%, 70% 0%;
+    }
+  
+    50% {
+      background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+        105% 0%;
+    }
+  
+    100% {
+      background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+        110% 10%;
+      background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+  }
+  
+
+  /* =============Todo list Start =========== */
+
+  .singletodo{
+
+    width:300px;
+    padding:10px;
+    background: transparent;
+    margin-top:5px;
+    display: flex;
+    
+  
+  }
+
+  .todobutton1{
+
+    margin-left: 10px;
+    padding: 4px 6px;
+    font-size: 9px;
+    color: #000000;
+    background: #b4ff89;
+    font-weight: 700;
+    border:2px double #ffffff;
+    transition: all linear .1s;
+    
+  }
+
+
+  .todobutton2{
+
+    margin-left:8px;
+    padding: 0px 3px;
+    font-size: 9px;
+    color: #000000;
+    background: #ff4800;
+    font-weight: 700;
+    border:2px double #ffffff;
+    transition: all linear .1s;
+  }
+
+.todoinput{
+
+    border: none;
+    outline: none;
+    background:transparent;
+    color: #eeff00;
+    font-size: 12px;
+    font-weight: 7000;
+    border: 2px double #ffffff;
+    padding:0px 5px;
+    width: 180px;
+  }
+
+  .todobutton1:active{
+    transform: scale(1.1);
+  }
+
+  .todobutton2:active{
+    transform: scale(1.1);
+  }
+
+  
